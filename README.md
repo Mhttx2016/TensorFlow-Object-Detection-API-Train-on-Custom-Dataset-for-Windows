@@ -90,7 +90,7 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
             protoc object_detection/protos/*.proto --python_out=.
             
 > 4.3 Add Libraries to PYTHONPATH  
->> When running locally, the tensorflow/models/ and slim directories should be appended to PYTHONPATH. **if there is no PYTHONPATH exist, create system variable with name=PYTHONPATH,value=tensorflow/models/;tensorflow/models/slim**
+>> When running locally, the tensorflow/models/ and slim directories should be appended to PYTHONPATH. **if there is no PYTHONPATH exist, create system variable with name=PYTHONPATH,value=tensorflow/models/;tensorflow/models/slim** (in order to import thrid party module, we need create PYTHONPATH system variable)
 
 > 4.4 Testing the Installation
 >> cd to tensorflow/models/ and run  
