@@ -4,10 +4,14 @@ The deployment of object detection on windows
 > Reference:   
 > http://blog.csdn.net/zhunianguo/article/details/53524792 
 ## 2. install numpy,scipy, opencv
-> (1). Download numpy.whl scipy.whl, opencv.whl from http://www.lfd.uci.edu/~gohlke/pythonlibs/   
-> (2). Install *.wheel in terminal via: 
+> (1). Download numpy.whl scipy.whl, matlibplot from http://www.lfd.uci.edu/~gohlke/pythonlibs/   
+> (2). Install  numpy.whl scipy.whl wheel in terminal via: 
 
-    pip3 install *.wheel
+        pip3 install *.wheel  
+> (3). open command prompt and make  
+
+        pip3 install matlibplot
+
 ## 3. install tensorflow with GPU support
 Reference:   
 https://www.tensorflow.org/install/install_windows  
@@ -24,7 +28,8 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
             nvcc -V
 >>> get information in the picture below if success:  
 ![image](https://github.com/Mhttx2016/TensorFlow-Object-Detection-API-on-Windows/tree/master/pics/nvcc.png)  
->> (3).Add CUDA to System Path  
+
+>> (3).Add CUDA to System Path  
 >>> open environment variables setting(system variable) there are already 'CUDA_PATH' and  CUDA_PATH_V8_0' exist, we need add aditional system variable:   
 
             CUDA_SDK_PATH = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v8.0 
@@ -44,3 +49,9 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
 >>> * copy cudnn\bin\cudnn64_5.dll to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\bin\   
 >>> * copy cudnn\include\cudnn.h to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\   
 >>> * copy cudnn\lib\x64\cudnn.lib to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\   
+
+> 3.4 install TensorFlow  
+>> Install Tensorflow via pip command prompt 
+
+            pip3 install --upgrade tensorflow-gpu
+ >**NOTE:** make sure that Visual C++ Redistributate 2015 x64 is installed. If not, download it           
