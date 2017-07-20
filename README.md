@@ -22,4 +22,4 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
 
     nvcc -V
 get information in the picture below if success:
-![image](https://github.com/ButBueatiful/dotvim/raw/master/screenshots/vim-screenshot.jpg)
+![image](https://github.com/Mhttx2016/TensorFlow-Object-Detection-API-on-Windows/tree/master/pics/nvcc.png)
