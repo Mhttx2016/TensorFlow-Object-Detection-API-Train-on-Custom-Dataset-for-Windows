@@ -83,6 +83,9 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
             pip3 install pillow
             pip3 install lxml
             pip3 install jupyter
+>> (3). lxml 
+>>> download lxml-3.8.0-cp36-cp36m-win_amd64.whl from http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml, install via pip3 install *.whl(otherwise may cause import error when import lxml.etree)
+
 > 4.2 Protobuf Compilation  
 > The Tensorflow Object Detection API uses Protobufs to configure model and training parameters. Before the framework can be used, the Protobuf libraries must be compiled. This should be done by running the following command from the tensorflow/models directory:  
 
@@ -96,5 +99,5 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
 >> cd to tensorflow/models/ and run  
     
             python object_detection/builders/model_builder_test.py
-
             
+> 4.5 
