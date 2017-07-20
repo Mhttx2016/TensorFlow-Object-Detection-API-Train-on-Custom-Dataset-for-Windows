@@ -21,18 +21,18 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
 >> (1).Download CUDA8.0 from https://developer.nvidia.com/cuda-toolkit and install by double clicking .exe  
 >> (2).Verify the installation in cmd terminal via:  
 
-    nvcc -V
+           nvcc -V
 >> get information in the picture below if success:  
 ![image](https://github.com/Mhttx2016/TensorFlow-Object-Detection-API-on-Windows/tree/master/pics/nvcc.png)  
 >> (3).Add CUDA to System Path  
 >> open environment variables setting(system variable) there are already 'CUDA_PATH' and  CUDA_PATH_V8_0' exist, we need add aditional system variable:   
 
-     CUDA_SDK_PATH = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v8.0 
-     CUDA_LIB_PATH = %CUDA_PATH%\lib\x64 
-     CUDA_BIN_PATH = %CUDA_PATH%\bin 
-     CUDA_SDK_BIN_PATH = %CUDA_SDK_PATH%\bin\win64 
-     CUDA_SDK_LIB_PATH = %CUDA_SDK_PATH%\common\lib\x64
+        CUDA_SDK_PATH = C:\ProgramData\NVIDIA Corporation\CUDA Samples\v8.0 
+        CUDA_LIB_PATH = %CUDA_PATH%\lib\x64 
+        CUDA_BIN_PATH = %CUDA_PATH%\bin 
+        CUDA_SDK_BIN_PATH = %CUDA_SDK_PATH%\bin\win64 
+        CUDA_SDK_LIB_PATH = %CUDA_SDK_PATH%\common\lib\x64
 >> then,add below to the end of system variable 'PATH':  
  
-     ;%CUDA_LIB_PATH%;%CUDA_BIN_PATH%;%CUDA_SDK_LIB_PATH%;%CUDA_SDK_BIN_PATH%;
- >> restart your computer
+        ;%CUDA_LIB_PATH%;%CUDA_BIN_PATH%;%CUDA_SDK_LIB_PATH%;%CUDA_SDK_BIN_PATH%;
+ >> restart your computer  
