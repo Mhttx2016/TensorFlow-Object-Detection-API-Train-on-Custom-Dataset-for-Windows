@@ -1,9 +1,9 @@
 # TensorFlow Object Detection API Train on Custom Dataset for Windows
 The deployment of object detection API and training on custom dataset on windows
-## 1. install python3.5.x
+## 1. Install python3.5.x
 > Reference:   
 > http://blog.csdn.net/zhunianguo/article/details/53524792 
-## 2. install numpy,scipy, matplotlib
+## 2. Install numpy,scipy, matplotlib
 > (1). Download numpy.whl scipy.whl from http://www.lfd.uci.edu/~gohlke/pythonlibs/   
 > (2). Install  numpy.whl scipy.whl wheel in terminal via: 
 
@@ -12,16 +12,16 @@ The deployment of object detection API and training on custom dataset on windows
 
         pip3 install matplotlib
 
-## 3. install tensorflow with GPU support
+## 3. Install tensorflow with GPU support
 Reference:   
 https://www.tensorflow.org/install/install_windows  
 http://www.cnblogs.com/hzm12/p/6422701.html  
 https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflow-runtime-python-3-5-2 
-### 3.1 install GPU driver
+### 3.1 Install GPU driver
 > (1).look up the GPU model(eg.Gforce GTX1070) in device manager  
 > (2).download corresponding driver from http://www.nvidia.cn/Download/index.aspx?lang=cn and install by double clicking .exe  
 
-### 3.2 install CUDA Toolkit8.0  
+### 3.2 Install CUDA Toolkit8.0  
 > (1).Download CUDA8.0 from https://developer.nvidia.com/cuda-toolkit and install by double clicking .exe  
 > (2).Validate the installation in cmd terminal via:  
 
@@ -42,7 +42,7 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
             ;%CUDA_LIB_PATH%;%CUDA_BIN_PATH%;%CUDA_SDK_LIB_PATH%;%CUDA_SDK_BIN_PATH%;
  >> restart your computer  
 
-### 3.3 install cuDNN_v5.1
+### 3.3 Install cuDNN_v5.1
 > (1).Download cuDNN_v5.1 from https://developer.nvidia.com/cudnn  
 > (2).Copy CuDNN files to Nvidia CUDA toolkit folder  
 >> when 3.2 has completed (usually is located on C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0)
@@ -50,7 +50,7 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
 >> * copy cudnn\include\cudnn.h to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\include\   
 >> * copy cudnn\lib\x64\cudnn.lib to C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v8.0\lib\x64\   
 
-### 3.4 install TensorFlow  
+### 3.4 Install TensorFlow  
 > (1).Install Tensorflow via pip command prompt 
 
             pip3 install --upgrade tensorflow-gpu
@@ -164,5 +164,3 @@ Reference: https://github.com/tensorflow/models/pull/1610
 
 ## 5.3 Run locally
 > [Train an object detection model on a local machine](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/running_locally.md)  
-
-## 6. Training on custom dataset  
