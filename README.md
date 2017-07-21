@@ -67,7 +67,7 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
             
 ## 4. TensorFlow Object Detection API Installation
 Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/installation.md  
-> **note** Download the API from https://github.com/Mhttx2016/models (the whole /models/* directory)
+> **NOTE** Download the API from https://github.com/Mhttx2016/models (the whole /models/* directory)
 ### 4.1 Dependencies   
 > Tensorflow Object Detection API depends on the following libraries:  
 * Protobuf 2.6  
