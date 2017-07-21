@@ -78,11 +78,11 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
 > (1).Protobuf Installation
 >> Download protoc-3.3.0-win32.zip from https://github.com/google/protobuf/releases, Copy protoc.exe in directory protoc-2.6.1-win32 to C:\Windows\System32(equivalent add to system variable 'PATH'). Validate via make '>protoc' in cmd prompt.  
 
-> (2).pillow, lxml, jupyter Installation  
+> (2).pillow, jupyter Installation  
 
             pip3 install pillow
-            pip3 install lxml
-            pip3 install jupyter
+            pip3 install jupyter
+            
 > (3). lxml 
 >> download lxml-3.8.0-cp36-cp36m-win_amd64.whl from http://www.lfd.uci.edu/~gohlke/pythonlibs/#lxml, install via pip3 install *.whl(otherwise may cause import error when import lxml.etree)
 
