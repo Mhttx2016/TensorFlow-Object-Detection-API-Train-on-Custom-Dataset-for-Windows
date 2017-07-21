@@ -121,23 +121,23 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
 
 >> In **object_detection/utils/ops.py**, in line200 and line 202 modify according to below, [further reference](https://github.com/tensorflow/models/pull/1610/commits/86dc50a95ccc6527c7fb24f74df4c7086926d9a5)   
 
-	...
-	# if depth < 0 or not isinstance(depth, (int, long)):
+		...
+		# if depth < 0 or not isinstance(depth, (int, long)):
         if depth < 0 or not isinstance(depth, int):
-                raise ValueError('`depth` must be a non-negative integer.')
+			raise ValueError('`depth` must be a non-negative integer.')
         # if left_pad < 0 or not isinstance(left_pad, (int, long)):
         if left_pad < 0 or not isinstance(left_pad, int):
-                raise ValueError('`left_pad` must be a non-negative integer.')
-        if depth == 0:
-                return None
-	....   
+			raise ValueError('`left_pad` must be a non-negative integer.')
+		if depth == 0:
+			return None
+		....   
 	
 > (4) Division behaves differently   
 
 >> In **object_detection/util/ops.py** line553:  
 
-    # bin_crop_size.append(crop_dim / num_bins)
-	bin_crop_size.append(crop_dim // num_bins)
+    	# bin_crop_size.append(crop_dim / num_bins)
+		bin_crop_size.append(crop_dim // num_bins)
         
 > (5) from unittest import mock
 
