@@ -67,6 +67,7 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
             
 ## 4. TensorFlow Object Detection API Installation
 Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/installation.md  
+> **note** Download the API from https://github.com/Mhttx2016/models (the whole /models/* directory)
 ### 4.1 Dependencies   
 > Tensorflow Object Detection API depends on the following libraries:  
 * Protobuf 2.6  
@@ -98,11 +99,10 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
 ### 4.4 Testing the Installation
 > cd to tensorflow/models/ and run  
     
-            python object_detection/builders/model_builder_test.py
+            python3 object_detection/builders/model_builder_test.py
             
 ## 5. Training on Pascal VOC201
 ### 5.1 Configuration
-> * Download API: Download the API from https://github.com/Mhttx2016/models (the whole /models/* directory)
 > * Preparing Inputs: Generating the PASCAL VOC TFRecord files according to [preparing_inputs](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/preparing_inputs.md)  
 > * Training Pipeline: Configuring the Object Detection Training Pipeline according to [configuring jobs](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/configuring_jobs.md)
 
