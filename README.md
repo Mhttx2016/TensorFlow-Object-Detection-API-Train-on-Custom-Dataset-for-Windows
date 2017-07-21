@@ -1,5 +1,5 @@
 # TensorFlow Object Detection API Train on Custom Dataset for Windows
-The deployment of object detection on windows
+The deployment of object detection API and training on custom dataset on windows
 ## 1. install python3.5.x
 > Reference:   
 > http://blog.csdn.net/zhunianguo/article/details/53524792 
