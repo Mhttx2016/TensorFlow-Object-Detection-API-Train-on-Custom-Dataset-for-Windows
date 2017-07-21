@@ -66,8 +66,8 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
             Hello, TensorFlow!
             
 ## 4. TensorFlow Object Detection API Installation
-Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/installation.md  
-> **NOTE** Download the API from https://github.com/Mhttx2016/models (the whole /models/* directory)
+Reference: https://github.com/tensorflow/models/blob/master/object_detection/g3doc/installation.md 
+> **NOTE** Download the API from https://github.com/tensorflow/models/tree/master/object_detection (the whole /models/* directory)
 ### 4.1 Dependencies   
 > Tensorflow Object Detection API depends on the following libraries:  
 * Protobuf 2.6  
@@ -103,8 +103,8 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
             
 ## 5. Training on Pascal VOC201
 ### 5.1 Configuration
-> * Preparing Inputs: Generating the PASCAL VOC TFRecord files according to [preparing_inputs](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/preparing_inputs.md)  
-> * Training Pipeline: Configuring the Object Detection Training Pipeline according to [configuring jobs](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/configuring_jobs.md)
+> * Preparing Inputs: Generating the PASCAL VOC TFRecord files according to [preparing_inputs](https://github.com/tensorflow/models/blob/master/object_detection/g3doc/preparing_inputs.md)  
+> * Training Pipeline: Configuring the Object Detection Training Pipeline according to [configuring jobs](https://github.com/tensorflow/models/blob/master/object_detection/g3doc/configuring_jobs.md)
 
 ### 5.2 Fix compatibility of object_detection for Python3
 > Before runing tranin.py with python3, the compatibility should be fixed.   
@@ -163,4 +163,4 @@ Reference: https://github.com/tensorflow/models/pull/1610
 >> **Note:** keep using .items()   
 
 ## 5.3 Run locally
-> [Train an object detection model on a local machine](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/running_locally.md)  
+> [Train an object detection model on a local machine](https://github.com/tensorflow/models/blob/master/object_detection/g3doc/running_locally.md)  
