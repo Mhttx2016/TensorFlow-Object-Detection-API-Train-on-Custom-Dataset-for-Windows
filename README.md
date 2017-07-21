@@ -107,19 +107,21 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
 > * Training Pipeline: Configuring the Object Detection Training Pipeline according to [configuring jobs](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/configuring_jobs.md)
 
 ### 5.2 Fix compatibility of object_detection for Python3
-> Before runing tranin.py with python3, the compatibility should be fixed.Reference: https://github.com/tensorflow/models/pull/1610 
+> Before runing tranin.py with python3, the compatibility should be fixed.   
+
+Reference: https://github.com/tensorflow/models/pull/1610 
 
 > (1) items() and iteritems() issue  
 
->> In **object_detection/core/batcher.py and object_detection/core/post_processing.py** replace all .iteritems() by .items().for more detail guidance look at [here](https://github.com/tensorflow/models/pull/1610/commits/092b1688f3a8cffab691bf95d78d6d11d11373db) or use six.iteritem like [here](https://github.com/tensorflow/models/pull/1610/commits/b9caf04efc32004191813347dcdd5c7296bdca1d).   
+>> In **object_detection/core/batcher.py and object_detection/core/post_processing.py** replace all .iteritems() by .items().For more more detail guidance, look at [here](https://github.com/tensorflow/models/pull/1610/commits/092b1688f3a8cffab691bf95d78d6d11d11373db) or use six.iteritem like [here](https://github.com/tensorflow/models/pull/1610/commits/b9caf04efc32004191813347dcdd5c7296bdca1d).   
 
 > (2) keys() of dict() issue    
 
->> In **object_detection/core/prefetcher.py**. keys() of dict() behaves different between Python 2 and 3, make it explicitly convert to list, for futher reference look at [here](https://github.com/tensorflow/models/pull/1610/commits/86dc50a95ccc6527c7fb24f74df4c7086926d9a5)  
+>> In **object_detection/core/prefetcher.py** keys() of dict() behaves different between Python 2 and 3, make it explicitly convert to list, for futher reference look at [here](https://github.com/tensorflow/models/pull/1610/commits/86dc50a95ccc6527c7fb24f74df4c7086926d9a5)  
 
 > (3) 'long' is no longer in py3   
 
->> In **object_detection/utils/ops.py**, in line200 and line 202 modify according to below[further reference](https://github.com/tensorflow/models/pull/1610/commits/86dc50a95ccc6527c7fb24f74df4c7086926d9a5)   
+>> In **object_detection/utils/ops.py** in line200 and line 202, modify according to below. [further reference](https://github.com/tensorflow/models/pull/1610/commits/86dc50a95ccc6527c7fb24f74df4c7086926d9a5)   
 
 		...
 		# if depth < 0 or not isinstance(depth, (int, long)):
@@ -154,3 +156,8 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
 		else:
 			from unittest import mock # pylint: disable=g-import-not-at-top
 			
+> (6) Change key of type 'tuple' to 'str'  
+
+>> [Detail modification](https://github.com/tensorflow/models/pull/1593/files)   
+
+**Note:** keep using .items()
