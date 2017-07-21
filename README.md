@@ -102,24 +102,27 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
             
 ## 5. Training on Pascal VOC201
 ### 5.1 Configuration
-> *Download API: Download the API from https://github.com/Mhttx2016/models (the whole /models/* directory)
-> *Preparing Inputs: Generating the PASCAL VOC TFRecord files according to [preparing_inputs](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/preparing_inputs.md)
-> *Training Pipeline: Configuring the Object Detection Training Pipeline according to [configuring jobs](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/configuring_jobs.md)
+> * Download API: Download the API from https://github.com/Mhttx2016/models (the whole /models/* directory)
+> * Preparing Inputs: Generating the PASCAL VOC TFRecord files according to [preparing_inputs](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/preparing_inputs.md)  
+> * Training Pipeline: Configuring the Object Detection Training Pipeline according to [configuring jobs](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/configuring_jobs.md)
 
 ### 5.2 Fix compatibility of object_detection for Python3
 > Before runing tranin.py with python3, the compatibility should be fixed.Reference: https://github.com/tensorflow/models/pull/1610 
+
 > (1) items() and iteritems() issue  
 
->> In **object_detection/core/batcher.py and object_detection/core/post_processing.py**, replace all .iteritems() by .items().for more detail guidance look [here](https://github.com/tensorflow/models/pull/1610/commits/092b1688f3a8cffab691bf95d78d6d11d11373db) or use six.iteritem [here](https://github.com/tensorflow/models/pull/1610/commits/b9caf04efc32004191813347dcdd5c7296bdca1d)
-> (2) keys() of dict() issue  
+>> In **object_detection/core/batcher.py and object_detection/core/post_processing.py**, replace all .iteritems() by .items().for more detail guidance look [here](https://github.com/tensorflow/models/pull/1610/commits/092b1688f3a8cffab691bf95d78d6d11d11373db) or use six.iteritem [here](https://github.com/tensorflow/models/pull/1610/commits/b9caf04efc32004191813347dcdd5c7296bdca1d)   
+
+> (2) keys() of dict() issue    
 
 >> In **object_detection/core/prefetcher.py**, keys() of dict() behaves different between Python 2 and 3, make it explicitly convert to list.[here](https://github.com/tensorflow/models/pull/1610/commits/86dc50a95ccc6527c7fb24f74df4c7086926d9a5)  
 
 > (3) 'long' is no longer in py3   
 
->> In **object_detection/utils/ops.py**, in line200 and line 202 modify according to below, [further reference](https://github.com/tensorflow/models/pull/1610/commits/86dc50a95ccc6527c7fb24f74df4c7086926d9a5)
-        ...
-        # if depth < 0 or not isinstance(depth, (int, long)):
+>> In **object_detection/utils/ops.py**, in line200 and line 202 modify according to below, [further reference](https://github.com/tensorflow/models/pull/1610/commits/86dc50a95ccc6527c7fb24f74df4c7086926d9a5)   
+
+	...
+	# if depth < 0 or not isinstance(depth, (int, long)):
         if depth < 0 or not isinstance(depth, int):
                 raise ValueError('`depth` must be a non-negative integer.')
         # if left_pad < 0 or not isinstance(left_pad, (int, long)):
@@ -127,19 +130,20 @@ Reference: https://github.com/Mhttx2016/models/blob/master/object_detection/g3do
                 raise ValueError('`left_pad` must be a non-negative integer.')
         if depth == 0:
                 return None
-                ....
+	....   
+	
 > (4) Division behaves differently   
 
 >> In **object_detection/util/ops.py** line553:  
 
-        #bin_crop_size.append(crop_dim / num_bins)
+    # bin_crop_size.append(crop_dim / num_bins)
 	bin_crop_size.append(crop_dim // num_bins)
         
-> (5) Python3 use from unittest import mock instead of Python2's import mock     
+> (5) from unittest import mock
 
->> In **object_detection/core/preprocessor_test.py** coment line8 and import as below
+>> In **object_detection/core/preprocessor_test.py** Python3 use from unittest import mock instead of Python2's import mock, coment line8 and import as below
 
-        #import mock
+        # import mock
         import numpy as np
         import six
         import tensorflow as tf
