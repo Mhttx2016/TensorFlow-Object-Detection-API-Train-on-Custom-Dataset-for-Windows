@@ -160,4 +160,9 @@ Reference: https://github.com/tensorflow/models/pull/1610
 
 >> [Detail modification](https://github.com/tensorflow/models/pull/1593/files)   
 
-**Note:** keep using .items()
+>> **Note:** keep using .items()   
+
+## 5.3 Run locally
+> [Train an object detection model on a local machine](https://github.com/Mhttx2016/models/blob/master/object_detection/g3doc/running_locally.md)  
+
+## 6. Training on custom dataset  
