@@ -171,7 +171,7 @@ Reference: https://github.com/tensorflow/models/pull/1610
 
 >> running object_detection/eval.py get error TypeError: string argument expected, got 'bytes'   
 
-change line83 in \object_detection\utils\visualization_utils.py   
+>> change line83 in \object_detection\utils\visualization_utils.py   
 
 		# output = six.StringIO()
 		output = six.BytesIO()
