@@ -27,6 +27,7 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
 
             nvcc -V
 >> get information in the picture below if success:  
+
 ![image](https://github.com/Mhttx2016/TensorFlow-Object-Detection-API-on-Windows/tree/master/pics/nvcc.png)  
 
 > (3).Add CUDA to System Path  
@@ -164,3 +165,14 @@ Reference: https://github.com/tensorflow/models/pull/1610
 
 ## 5.3 Run locally
 > [Train an object detection model on a local machine](https://github.com/tensorflow/models/blob/master/object_detection/g3doc/running_locally.md)  
+
+## x.x Issures
+> 1.TypeError: string argument expected, got 'bytes'  
+
+>> running object_detection/eval.py get error TypeError: string argument expected, got 'bytes'   
+
+change line83 in \object_detection\utils\visualization_utils.py   
+
+		# output = six.StringIO()
+		output = six.BytesIO()
+
