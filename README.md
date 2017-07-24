@@ -169,9 +169,14 @@ Reference: https://github.com/tensorflow/models/pull/1610
 ## 6 Training on Customnized Extended Pascal VOC2012 Dateset
 
 ### 6.1 Extending Pascal VOC2012
-> We add an own class to 20 classes pascal dataset, to do so, we first annotate our custom images using an annotation software [LabelImg](https://github.com/tzutalin/labelImg)   
+> We add an own class to 20 classes pascal dataset, to do so,   
 
-> ![labelimg_demo](pics/labelimg.jpg?raw=true)
+>> (1) we first annotate our custom images using an annotation software [LabelImg](https://github.com/tzutalin/labelImg). 
+>> ![labelimg_demo](pics/labelimg.jpg?raw=true)
+>> (2) Then add our additional class images(.jpg) and corresponding annotation files(.xml, the file name should be same as that of corresponding imgage) to pascal dataset folders \VOCdevkit\VOC2012\JPEGImages and \VOCdevkit\VOC2012\Annotations respectively. 
+>> (3) Add the custom class's training imagesets(the file names of xml or jpg), val imagesset and the union of them to the end of \VOCdevkit\VOC2012\ImageSets\Main\train_train.txt, \VOCdevkit\VOC2012\ImageSets\Main\train_train.txt and \VOCdevkit\VOC2012\ImageSets\Main\train_trainval.txt respectively.
+>> (4) regenerate the TFRecord files according to [preparing_inputs]
+
 
 ## x.x Issues
 > 1.TypeError: string argument expected, got 'bytes'  
