@@ -28,7 +28,7 @@ https://stackoverflow.com/questions/43942185/failed-to-load-the-native-tensorflo
             nvcc -V
 >> get information in the picture below if success:  
 
-![image](https://github.com/Mhttx2016/TensorFlow-Object-Detection-API-on-Windows/tree/master/pics/nvcc.png)  
+![image](pics/nvcc.png?raw=true "Optional Title")  
 
 > (3).Add CUDA to System Path  
 >> Open environment variables setting(system variable) there are already 'CUDA_PATH' and  CUDA_PATH_V8_0' exist, we need add aditional system variable:   
@@ -169,8 +169,8 @@ Reference: https://github.com/tensorflow/models/pull/1610
 ## 6 Training on Customnized Extended Pascal VOC2012 Dateset
 
 ### 6.1 Extending Pascal VOC2012
-> We add an own class to 20 classes pascal dataset, to do so, we first annotate our custom images using an annotation software [LabelImg](https://github.com/tzutalin/labelImg)   
-![demo_image]https://raw.githubusercontent.com/tzutalin/labelImg/master/demo/demo3.jpg
+> We add an own class to 20 classes pascal dataset, to do so, we first annotate our custom images using an annotation software [LabelImg](https://github.com/tzutalin/labelImg?raw=true "Optional Title")   
+
 
 ## x.x Issues
 > 1.TypeError: string argument expected, got 'bytes'  
