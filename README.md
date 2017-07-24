@@ -163,15 +163,23 @@ Reference: https://github.com/tensorflow/models/pull/1610
 
 >> **Note:** keep using .items()   
 
-## 5.3 Run locally
+### 5.3 Run locally
 > [Train an object detection model on a local machine](https://github.com/tensorflow/models/blob/master/object_detection/g3doc/running_locally.md)  
 
-## x.x Issures
+## 6 Training on Customnized Extended Pascal VOC2012 Dateset
+
+### 6.1 Extending Pascal VOC2012
+> We add an own class to 20 classes pascal dataset, to do so, we first annotate our custom images using an annotation software ![LabelImg](https://github.com/tzutalin/labelImg)   
+
+.. image:: https://raw.githubusercontent.com/tzutalin/labelImg/master/demo/demo3.jpg
+     :alt: Demo Image
+
+## x.x Issues
 > 1.TypeError: string argument expected, got 'bytes'  
 
 >> running object_detection/eval.py get error TypeError: string argument expected, got 'bytes'   
 
->> change line83 in \object_detection\utils\visualization_utils.py   
+>> change line83 of \object_detection\utils\visualization_utils.py   
 
 		# output = six.StringIO()
 		output = six.BytesIO()
