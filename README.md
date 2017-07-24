@@ -169,8 +169,9 @@ Reference: https://github.com/tensorflow/models/pull/1610
 ## 6 Training on Customnized Extended Pascal VOC2012 Dateset
 
 ### 6.1 Extending Pascal VOC2012
-> We add an own class to 20 classes pascal dataset, to do so, we first annotate our custom images using an annotation software [LabelImg](https://github.com/tzutalin/labelImg?raw=true "Optional Title")   
-> [labelimg_demo](pics/labelimg.jpg?raw=true)
+> We add an own class to 20 classes pascal dataset, to do so, we first annotate our custom images using an annotation software [LabelImg](https://github.com/tzutalin/labelImg)   
+
+> ![labelimg_demo](pics/labelimg.jpg?raw=true)
 
 ## x.x Issues
 > 1.TypeError: string argument expected, got 'bytes'  
